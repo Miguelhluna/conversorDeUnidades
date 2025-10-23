@@ -30,3 +30,4 @@ Mi meta es **entender cómo funcionan las estructuras lógicas en JavaScript**, 
 - **Git & GitHub** – control de versiones y publicación del código  
 
 ---
+**Adicional** – Cualquier consejo que me quieran dar, es bien recibido  
