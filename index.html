@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de unidades</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="Conversor">
+        <!--Unidades de Medidas -->
+        <select name="unidades" id="unidades">
+            <option value="Longitud" id="Longitud"> Longitud </option>
+            <option value="Masa" id="Masa"> Masa </option>
+            <option value="Tiempo" id="Tiempo"> Tiempo </option>
+            <option value="Temperatura" id="Temperatura"> Temperatura </option>
+            <option value="Area" id="Area"> Área </option>
+            <option value="Volumen" id="Volumen"> Volumen </option>
+            <option value="Velocidad" id="Velocidad"> Velocidad </option>
+        </select>
+        
+        <!-- Medidas de Longitud -->
+        <div id="unidadesIzquierda">
+            <input type="text" id="valorIzquierda" placeholder="Ingresa un número" oninput="convertir()">
+            <select name="medidaLongitud" id="medidaLongitud">
+                <option value="Milimetro" id="Milimetro"> Milímetro </option>
+                <option value="Centimetro" id="Centimetro"> Centímetro </option>
+                <option value="Metro" id="Metro"> Metro </option>
+                <option value="Kilometro" id="Kilometro"> Kilómetro </option>
+                <option value="Pulgada" id="Pulgada"> Pulgada </option>
+                <option value="Pie" id="Pie"> Pie </option>
+                <option value="Yarda" id="Yarda"> Yarda </option>
+                <option value="Milla" id="Milla"> Milla </option>
+            </select>
+
+            <!-- Medidas de Masa -->
+            <select name="medidaMasa" id="medidaMasa">
+                <option value="Miligramo" id="Miligramo"> Miligramo </option>
+                <option value="Gramo" id="Gramo"> Gramo </option>
+                <option value="Kilogramo" id="Kilogramo"> Kilogramo </option>
+                <option value="Tonelada" id="Tonelada"> Tonelada </option>
+                <option value="Libra" id="Libra"> Libra </option>
+                <option value="Onza" id="Onza"> Onza </option>
+            </select>
+
+            <!-- Medidas de Tiempo -->
+            <select name="medidaTiempo" id="medidaTiempo">
+                <option value="Nanosegundo" id="Nanosegundo"> Nanosegundo </option>
+                <option value="Microsegundo" id="Microsegundo"> Microsegundo </option>
+                <option value="Milisegundo" id="Milisegundo"> Milisegundo </option>
+                <option value="Segundo" id="Segundo"> Segundo </option>
+                <option value="Minuto" id="Minuto"> Minuto </option>
+                <option value="Hora" id="Hora"> Hora </option>
+                <option value="Dia" id="Dia"> Día </option>
+                <option value="Semana" id="Semana"> Semana </option>
+                <option value="Mes" id="Mes"> Mes </option>
+                <option value="Ano" id="Ano"> Año </option>
+            </select>
+
+            <!-- Medidas de Temperatura -->
+            <select name="medidaTemperatura" id="medidaTemperatura">
+                <option value="Celsius" id="Celsius"> Celsius </option>
+                <option value="Kelvin" id="Kelvin"> Kelvin </option>
+                <option value="Fahrenheit" id="Fahrenheit"> Fahrenheit </option>
+            </select>
+
+            <!-- Medidas de Área -->
+            <select name="medidaArea" id="medidaArea">
+                <option value="MilimetroCuadrado" id="MilimetroCuadrado"> Milímetro cuadrado </option>
+                <option value="CentimetroCuadrado" id="CentimetroCuadrado"> Centímetro cuadrado </option>
+                <option value="MetroCuadrado" id="MetroCuadrado"> Metro cuadrado </option>
+                <option value="KilometroCuadrado" id="KilometroCuadrado"> Kilómetro cuadrado </option>
+                <option value="Hectarea" id="Hectarea"> Hectárea </option>
+                <option value="Acre" id="Acre"> Acre </option>
+            </select>
+
+            <!-- Medidas de Volumen -->
+            <select name="medidaVolumen" id="medidaVolumen">
+                <option value="Mililitro" id="Mililitro"> Mililitro </option>
+                <option value="CentimetroCubico" id="CentimetroCubico"> Centímetro cúbico </option>
+                <option value="Litro" id="Litro"> Litro </option>
+                <option value="MetroCubico" id="MetroCubico"> Metro cúbico </option>
+                <option value="Galon" id="Galon"> Galón </option>
+                <option value="OnzaLiquida" id="OnzaLiquida"> Onza líquida </option>
+            </select>
+
+            <!-- Medidas de Velocidad -->
+            <select name="medidaVelocidad" id="medidaVelocidad">
+                <option value="MetroPorSegundo" id="MetroPorSegundo"> Metro/segundo </option>
+                <option value="KilometroPorHora" id="KilometroPorHora"> Kilómetro/hora </option>
+                <option value="MillaPorHora" id="MillaPorHora"> Milla/hora </option>
+                <option value="Nudo" id="Nudo"> Nudo </option>
+                <option value="PiePorSegundo" id="PiePorSegundo"> Pie/segundo </option>
+            </select>
+        </div>
+        <!-- Medidas de Longitud -->
+
+        <div id="unidadesDerecha">
+            <input type="text" id="valorDerecha">
+            <select name="medidaLongitud" id="medidaLongitud2">
+                <option value="Milimetro" id="Milimetro"> Milímetro </option>
+                <option value="Centimetro" id="Centimetro"> Centímetro </option>
+                <option value="Metro" id="Metro"> Metro </option>
+                <option value="Kilometro" id="Kilometro"> Kilómetro </option>
+                <option value="Pulgada" id="Pulgada"> Pulgada </option>
+                <option value="Pie" id="Pie"> Pie </option>
+                <option value="Yarda" id="Yarda"> Yarda </option>
+                <option value="Milla" id="Milla"> Milla </option>
+            </select>
+
+            <!-- Medidas de Masa -->
+            <select name="medidaMasa" id="medidaMasa2">
+                <option value="Miligramo" id="Miligramo"> Miligramo </option>
+                <option value="Gramo" id="Gramo"> Gramo </option>
+                <option value="Kilogramo" id="Kilogramo"> Kilogramo </option>
+                <option value="Tonelada" id="Tonelada"> Tonelada </option>
+                <option value="Libra" id="Libra"> Libra </option>
+                <option value="Onza" id="Onza"> Onza </option>
+            </select>
+
+            <!-- Medidas de Tiempo -->
+            <select name="medidaTiempo" id="medidaTiempo2">
+                <option value="Segundo" id="Segundo"> Segundo </option>
+                <option value="Minuto" id="Minuto"> Minuto </option>
+                <option value="Hora" id="Hora"> Hora </option>
+                <option value="Dia" id="Dia"> Día </option>
+            </select>
+
+            <!-- Medidas de Temperatura -->
+            <select name="medidaTemperatura" id="medidaTemperatura2">
+                <option value="Celsius" id="Celsius"> Celsius </option>
+                <option value="Kelvin" id="Kelvin"> Kelvin </option>
+                <option value="Fahrenheit" id="Fahrenheit"> Fahrenheit </option>
+            </select>
+
+            <!-- Medidas de Área -->
+            <select name="medidaArea" id="medidaArea2">
+                <option value="MilimetroCuadrado" id="MilimetroCuadrado"> Milímetro cuadrado </option>
+                <option value="CentimetroCuadrado" id="CentimetroCuadrado"> Centímetro cuadrado </option>
+                <option value="MetroCuadrado" id="MetroCuadrado"> Metro cuadrado </option>
+                <option value="KilometroCuadrado" id="KilometroCuadrado"> Kilómetro cuadrado </option>
+                <option value="Hectarea" id="Hectarea"> Hectárea </option>
+                <option value="Acre" id="Acre"> Acre </option>
+            </select>
+
+            <!-- Medidas de Volumen -->
+            <select name="medidaVolumen" id="medidaVolumen2">
+                <option value="Mililitro" id="Mililitro"> Mililitro </option>
+                <option value="CentimetroCubico" id="CentimetroCubico"> Centímetro cúbico </option>
+                <option value="Litro" id="Litro"> Litro </option>
+                <option value="MetroCubico" id="MetroCubico"> Metro cúbico </option>
+                <option value="Galon" id="Galon"> Galón </option>
+                <option value="OnzaLiquida" id="OnzaLiquida"> Onza líquida </option>
+            </select>
+
+            <!-- Medidas de Velocidad -->
+            <select name="medidaVelocidad" id="medidaVelocidad2">
+                <option value="MetroPorSegundo" id="MetroPorSegundo"> Metro/segundo </option>
+                <option value="KilometroPorHora" id="KilometroPorHora"> Kilómetro/hora </option>
+                <option value="MillaPorHora" id="MillaPorHora"> Milla/hora </option>
+                <option value="Nudo" id="Nudo"> Nudo </option>
+                <option value="PiePorSegundo" id="PiePorSegundo"> Pie/segundo </option>
+            </select>
+        </div>
+    </div>
+
+    <script src="conversorDeUnidades.js"></script>
+</body>
+
+</html>
